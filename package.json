@@ -1,0 +1,40 @@
+{
+  "name": "@mango-run/cli",
+  "version": "0.0.5",
+  "description": "arbitrage bot depends on mango market",
+  "repository": "git@github.com:mango-run/mango-run-cli.git",
+  "author": "yujuiting <yujuiting@me.com>",
+  "main": "./src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@blockworks-foundation/mango-client": "^3.3.18",
+    "@mango-run/core": "^0.0.14",
+    "@solana/web3.js": "^1.36.0",
+    "bs58": "^5.0.0",
+    "commander": "^9.0.0",
+    "dotenv": "^16.0.0",
+    "inquirer": "^8.2.1",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "deploy": "yarn build && cd ./lib && yarn publish --ignore-scripts --non-interactive"
+  },
+  "bin": {
+    "mango-run": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "package.json"
+  ]
+}
