@@ -1,17 +1,12 @@
 import base58 from 'bs58'
 
-import {
-  ConsoleLogger,
-  createMangoPerpMarketConfigs,
-  MangoPerpMarket,
-} from '@mango-run/core'
+import { ConsoleLogger, createMangoPerpMarketConfigs, MangoPerpMarket } from '@mango-run/core'
 import { Keypair } from '@solana/web3.js'
 
 import { BaseArgs } from '../types'
 import { inputBaseSymbol } from '../prompts/inputs'
 import { selectAccount } from '../prompts/select-account'
 import { createContext } from '../helpers/create-context'
-
 
 export async function closePosition(args: BaseArgs) {
   const logger = new ConsoleLogger()
@@ -32,6 +27,6 @@ export async function closePosition(args: BaseArgs) {
 
   const market = new MangoPerpMarket({ ...marketConfigs, mangoAccount }, logger)
 
-  const tx = await market.closePosition()
+  const tx = await market.closeAllPosition()
   console.log('tx:', tx)
 }

@@ -8,7 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "@blockworks-foundation/mango-client": "^3.3.18",
-    "@mango-run/core": "^0.0.14",
+    "@mango-run/core": "^0.0.15",
     "@solana/web3.js": "^1.36.0",
     "bs58": "^5.0.0",
     "commander": "^9.0.0",
