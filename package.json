@@ -1,6 +1,6 @@
 {
   "name": "@mango-run/cli",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "arbitrage bot depends on mango market",
   "repository": "git@github.com:mango-run/mango-run-cli.git",
   "author": "yujuiting <yujuiting@me.com>",
