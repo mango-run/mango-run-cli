@@ -1,14 +1,14 @@
 {
   "name": "@mango-run/cli",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "arbitrage bot depends on mango market",
   "repository": "git@github.com:mango-run/mango-run-cli.git",
   "author": "yujuiting <yujuiting@me.com>",
   "main": "./src/index.js",
   "license": "MIT",
   "dependencies": {
-    "@blockworks-foundation/mango-client": "^3.3.18",
-    "@mango-run/core": "^0.0.15",
+    "@blockworks-foundation/mango-client": "^3.4.1",
+    "@mango-run/core": "^0.0.17",
     "@solana/web3.js": "^1.36.0",
     "bs58": "^5.0.0",
     "commander": "^9.0.0",
