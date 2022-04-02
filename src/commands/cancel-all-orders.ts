@@ -31,9 +31,7 @@ export async function cancelAllOrders(baseArgs: BaseArgs) {
   while (orders.length > 0) {
     console.log('count of orders', orders.length)
     spinner.start('canceling')
-    const txs = await ctx.client
-      .cancelAllPerpOrders(ctx.group, [market], account, new Account(ctx.keypair.secretKey))
-      .catch(() => [])
+    const txs = (await ctx.client.cancelAllPerpOrders(ctx.group, [market], account, ctx.keypair).catch()) || []
     await Promise.all(txs.map(tx => ctx.connection.confirmTransaction(tx, 'confirmed'))).catch()
     spinner.stop()
     spinner.start('checking orders')

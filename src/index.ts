@@ -30,9 +30,7 @@ baseOptions(program.command('cancel-all-orders'))
   .description('cancel all orders')
   .action(cancelAllOrders)
 
-baseOptions(program.command('close-position'))
-  .description('close perp market position')
-  .action(closePosition)
+baseOptions(program.command('close-position')).description('close perp market position').action(closePosition)
 
 // prettier-ignore
 baseOptions(program.command('grid-bot'))
@@ -45,6 +43,7 @@ baseOptions(program.command('grid-bot'))
   .option('--start-price <number>', 'bot will start after price lower or equal to start price', parseFloat)
   .option('--stop-loss-price <number>', 'bot will clear all position and stop after price lowner or equal to this price', parseFloat)
   .option('--take-profit-price <number>', 'bot will clear all position and stop after price higher or equal to this price', parseFloat)
+  .option('-type, --grid-type <string>', 'long, short or neutral. default neutral', 'neutral')
   .action(gridBot)
 
 program.parse()

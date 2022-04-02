@@ -24,6 +24,7 @@ interface GridBotArgs extends BaseArgs {
   startPrice?: number
   stopLossPrice?: number
   takeProfitPrice?: number
+  gridType?: GridSignalConfigs['gridType']
 }
 
 export async function gridBot(args: GridBotArgs) {
@@ -55,6 +56,7 @@ export async function gridBot(args: GridBotArgs) {
     startPrice: args.startPrice,
     stopLossPrice: args.stopLossPrice,
     takeProfitPrice: args.takeProfitPrice,
+    gridType: args.gridType,
   }
 
   const signal = new NaiveGridSignal(signalConfigs, logger)
